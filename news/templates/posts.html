@@ -26,7 +26,7 @@ Posts
         <tr>
             <td><a href="{{ post.pk }}">{{ post.title|truncatechars:80|censor }}</a></td>
             <td>{{ post.dateCreation|date:'d.m.Y' }}</td>
-            <td>{{ post.text|truncatewords:20 }}</td> <!--truncatechars ограничивает вывод до указанного числа символов-->
+            <td>{{ post.text|truncatewords:20|censor }}</td>
             <td>{{ post.rating }}</td>
         </tr>
         {% endfor %}
